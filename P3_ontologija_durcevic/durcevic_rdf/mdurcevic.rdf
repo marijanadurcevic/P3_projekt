@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:dc11="http://purl.org/dc/elements/1.1/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ns0="http://oziz.ffos.hr/mdurcevic/ontologija-rock#">
+
+  <owl:Ontology rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock">
+    <owl:imports rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock"/>
+    <dc11:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marijana Durcevic</dc11:creator>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Za potrebe pregleda nekih od najboljih rock albuma iz vise drzava.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontologija rock albuma</rdfs:label>
+  </owl:Ontology>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
+  </owl:AnnotationProperty>
+
+  <owl:ObjectProperty rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#imaIzvodaca">
+    <rdfs:domain rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Naziv"/>
+    <rdfs:range rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Izvodac"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#imaIzvodacaAlbuma">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <owl:equivalentProperty rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#imaIzvodaca"/>
+    <rdfs:subPropertyOf rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rockimaIzvodaca"/>
+    <rdfs:domain rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Naziv"/>
+    <rdfs:range rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Izvodac"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#DolaziIz">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#JeIzdaoAlbum">
+        <rdfs:domain rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Drzava"/>
+        <rdfs:range rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Naziv"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+
+    <rdfs:domain rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Naziv"/>
+    <rdfs:range rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Drzava"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#izveoJe ">
+    <owl:inverseOf rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#imaIzvodaca"/>
+    <rdfs:domain rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Izvodac"/>
+    <rdfs:range rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Naziv"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#PripadaRockZanru">
+    <rdfs:domain rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Naziv"/>
+    <rdfs:range rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#RockZanr"/>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#brojPjesama">
+    <rdfs:domain rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Naziv"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#godinaIzlaska">
+    <rdfs:domain rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Naziv"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#ZoveSe">
+    <rdfs:domain rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#imaIzvodaca"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#imaNaslov">
+    <rdfs:domain rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Naziv"/>
+  </owl:DatatypeProperty>
+
+  <owl:Class rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Izvodac">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Drzava">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Naziv">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#RockZanr">
+  </owl:Class>
+
+  <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#SAD">
+    <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Drzava"/>
+    <ns0:jeIzdaoAlbum rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Ride_the_Lighting"/>
+    <ns0:jeIzdaoAlbum rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Nevermind"/>
+    <ns0:drzava rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAD</ns0:drzava>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAD</rdfs:label>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Hard_Rock">
+    <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#RockZanr"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Metal">
+    <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#RockZanr"/>
+    <ns0:rockZanr rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metal</ns0:rockZanr>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metal</rdfs:label>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Trash">
+    <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#RockZanr"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#GNR">
+    <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Izvodac"/>
+    <ns0:jeIzdaoAlbum rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Appetite_For_Destruction"/>
+    <ns0:jeIzdaoAlbum rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Use_Your_Illusion"/>
+    <ns0:drzava rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAD</ns0:drzava>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAD</rdfs:label>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GNR</rdfs:label>
+    <ns0:zoveSe rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GNR</ns0:zoveSe>
+    <ns0:izveoJe rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Appetite_For_Destruction"/>
+    <ns0:izveoJe rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Use_Your_Illusion"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Magijski_realizam">
+    <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#RockZanr"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Appetite_For_Destruction">
+    <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Naziv"/>
+    <ns0:imaIzvodaca rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#GNR"/>
+    <ns0:dolaziIz rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#SAD"/>
+    <ns0:pripadaRockZanru rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Hard_Rock"/>
+    <ns0:pripadaRockZanru rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Blues"/>
+    <ns0:brojPjesama rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12 pjesama</ns0:brojPjesama>
+    <ns0:godinaIzlaska rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1987</ns0:godinaIzlaska>
+    <ns0:imaNaslov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appetite For Destruction</ns0:imaNaslov>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appetite For Destruction</rdfs:label>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Nevermind">
+    <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Naziv"/>
+    <ns0:imaIzvodaca>
+      <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Nirvana">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Izvodac"/>
+        <ns0:izveoJe rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Nevermind"/>
+        <ns0:zoveSe rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nirvana</ns0:zoveSe>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nirvana</rdfs:label>
+      </owl:NamedIndividual>
+    </ns0:imaIzvodaca>
+
+    <ns0:dolaziIz rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#SAD"/>
+    <ns0:pripadaRockZanru rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Grunge"/>
+    <ns0:brojPjesama rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12 pjesama</ns0:brojPjesama>
+    <ns0:godinaIzlaska rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1991</ns0:godinaIzlaska>
+    <ns0:imaNaslov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nevermind</ns0:imaNaslov>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nevermind</rdfs:label>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Use_Your_Illusion">
+    <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Naziv"/>
+    <ns0:imaIzvodaca rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#GNR"/>
+    <ns0:dolaziIz rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#SAD"/>
+    <ns0:pripadaRockZanru rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Hard_Rock"/>
+    <ns0:pripadaRockZanru rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Blues"/>
+    <ns0:brojPjesama rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16 pjesama</ns0:brojPjesama>
+    <ns0:godinaIzlaska rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1991</ns0:godinaIzlaska>
+    <ns0:imaNaslov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use Your Illusion</ns0:imaNaslov>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use Your Illusion</rdfs:label>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Finska">
+    <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Drzava"/>
+    <ns0:jeIzdaoAlbum rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Imaginaerum"/>
+    <ns0:drzava rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finska</ns0:drzava>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finska</rdfs:label>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Bilo_jednom_u_Hrvatskoj">
+    <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Naziv"/>
+    <ns0:imaIzvodaca>
+      <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#MPT">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Izvodac"/>
+        <ns0:izveoJe rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Bilo_jednom_u_Hrvatskoj"/>
+        <ns0:zoveSe rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MPT</ns0:zoveSe>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MPT</rdfs:label>
+      </owl:NamedIndividual>
+    </ns0:imaIzvodaca>
+
+    <ns0:dolaziIz>
+      <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Hrvatska">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Drzava"/>
+        <ns0:jeIzdaoAlbum rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Bilo_jednom_u_Hrvatskoj"/>
+        <ns0:drzava rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hrvatska</ns0:drzava>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hrvatska</rdfs:label>
+      </owl:NamedIndividual>
+    </ns0:dolaziIz>
+
+    <ns0:pripadaRockZanru rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Christian_rock"/>
+    <ns0:brojPjesama rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12 pjesama</ns0:brojPjesama>
+    <ns0:godinaIzlaska rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</ns0:godinaIzlaska>
+    <ns0:imaNaslov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bilo jednom u Hrvatskoj</ns0:imaNaslov>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bilo jednom u Hrvatskoj</rdfs:label>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Australija">
+    <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Drzava"/>
+    <ns0:jeIzdaoAlbum rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Back_in_Black"/>
+    <ns0:drzava rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australija</ns0:drzava>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australija</rdfs:label>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Ride_the_Lighting">
+    <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Naziv"/>
+    <ns0:imaIzvodaca>
+      <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Metallica">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Izvodac"/>
+        <ns0:zoveSe rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metallica</ns0:zoveSe>
+        <ns0:izveoJe rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Ride_the_Lighting"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metallica</rdfs:label>
+      </owl:NamedIndividual>
+    </ns0:imaIzvodaca>
+
+    <ns0:dolaziIz rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#SAD"/>
+    <ns0:pripadaRockZanru rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Metal"/>
+    <ns0:pripadaRockZanru rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Trash"/>
+    <ns0:pripadaRockZanru rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Hard_Rock"/>
+    <ns0:brojPjesama rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8 pjesama</ns0:brojPjesama>
+    <ns0:godinaIzlaska rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1984</ns0:godinaIzlaska>
+    <ns0:imaNaslov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ride the Lighting</ns0:imaNaslov>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ride the Lighting</rdfs:label>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Back_in_Black">
+    <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Naziv"/>
+    <ns0:imaIzvodaca>
+      <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#ACDC">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Izvodac"/>
+        <ns0:zoveSe rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACDC</ns0:zoveSe>
+        <ns0:izveoJe rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Back_in_Black"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACDC</rdfs:label>
+      </owl:NamedIndividual>
+    </ns0:imaIzvodaca>
+
+    <ns0:dolaziIz rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Australija"/>
+    <ns0:pripadaRockZanru rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Heavy_metal"/>
+    <ns0:brojPjesama rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10 pjesama</ns0:brojPjesama>
+    <ns0:godinaIzlaska rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1980</ns0:godinaIzlaska>
+    <ns0:imaNaslov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Back in Black</ns0:imaNaslov>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Back in Black</rdfs:label>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Imaginaerum">
+    <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Naziv"/>
+    <ns0:imaIzvodaca>
+      <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Nightwish">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Izvodac"/>
+        <ns0:izveoJe rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Imaginaerum"/>
+        <ns0:zoveSe rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nightwish</ns0:zoveSe>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nightwish</rdfs:label>
+      </owl:NamedIndividual>
+    </ns0:imaIzvodaca>
+
+    <ns0:dolaziIz rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Finska"/>
+    <ns0:pripadaRockZanru rdf:resource="http://oziz.ffos.hr/mdurcevic/ontologija-rock#Symphonic_metal"/>
+    <ns0:brojPjesama rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13 pjesama</ns0:brojPjesama>
+    <ns0:godinaIzlaska rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</ns0:godinaIzlaska>
+    <ns0:imaNaslov rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Imaginaerum</ns0:imaNaslov>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Imaginaerum</rdfs:label>
+  </owl:NamedIndividual>
+
+</rdf:RDF>

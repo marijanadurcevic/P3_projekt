@@ -1,0 +1,25 @@
+{
+    "name": "durcevic-php/projekt",
+    "description": "REST API za projekt iz kolegija P3.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Marijana Durcevic",
+            "email": "mdjurcevic@ffos.hr"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Durcevic\\": "src/Durcevic"
+        }
+    },
+    "require": {
+        "mikecao/flight": "^1.3",
+        "doctrine/orm": "*",
+        "easyrdf/easyrdf": "^1.0",
+        "ml/json-ld": "^1.2",
+        "semsol/arc2": "^2.5",
+        "symfony/serializer": "*",
+        "symfony/property-access": "*"
+    }
+}

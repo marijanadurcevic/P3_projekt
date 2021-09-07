@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="naziv" type="id" />
+    <item name="izvodac1" type="id" />
+    <item name="rockZanr" type="id" />
+    <item name="brojPjesama" type="id" />
+    <item name="drzava" type="id" />
+</resources>
